@@ -1,0 +1,2 @@
+Any raw assets you want to be deployed with your application can be placed in
+this directory (and child directories).

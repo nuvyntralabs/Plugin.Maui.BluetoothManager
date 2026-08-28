@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net10.0;net10.0-android;net10.0-ios</TargetFrameworks>
+		<UseMaui>true</UseMaui>
+		<SingleProject>true</SingleProject>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<LangVersion>latest</LangVersion>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>$(NoWarn);CS1591</NoWarn>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">15.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+
+		<RootNamespace>Plugin.Maui.BluetoothManager</RootNamespace>
+		<AssemblyName>Plugin.Maui.BluetoothManager</AssemblyName>
+		<PackageId>Plugin.Maui.BluetoothManager</PackageId>
+		<Title>.NET MAUI BluetoothManager — BLE device connection manager</Title>
+		<Description>High-level Bluetooth Low Energy connection manager for .NET MAUI on Android and iOS. Scan, connect, read, write, notify, auto-reconnect, timeouts, retries, permissions, and adapter lifecycle for printers, POS, medical, IoT, and industrial devices.</Description>
+		<PackageTags>dotnet-maui;maui;maui-plugin;maui-utilities;cross-platform;android;ios;nuget;mauiessentials;bluetooth;ble;bluetooth-le;gatt;printer;pos;iot;medical-device;reconnect;permissions</PackageTags>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageProjectUrl>https://github.com/NiladriPadhy/Plugin.Maui.BluetoothManager</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/NiladriPadhy/Plugin.Maui.BluetoothManager</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<Authors>MauiEssentials</Authors>
+		<Company>MauiEssentials</Company>
+		<Copyright>Copyright © MauiEssentials</Copyright>
+		<Version>1.0.0</Version>
+		<PackageOutputPath>$(MSBuildThisFileDirectory)..\..\artifacts</PackageOutputPath>
+		<IsPackable>true</IsPackable>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<PackageReleaseNotes>Initial release: high-level BLE device connection manager with scan, connect, read/write/notify, auto-reconnect, timeout, retry, device filtering, RSSI, permissions, and adapter lifecycle.</PackageReleaseNotes>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\..\README.md" Pack="true" PackagePath="\" />
+		<None Include="..\..\LICENSE" Pack="true" PackagePath="\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<InternalsVisibleTo Include="Plugin.Maui.BluetoothManager.Tests" />
+	</ItemGroup>
+
+</Project>

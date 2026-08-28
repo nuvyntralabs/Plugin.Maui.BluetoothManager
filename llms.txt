@@ -1,0 +1,43 @@
+# Plugin.Maui.BluetoothManager
+
+High-level Bluetooth Low Energy device connection manager for .NET MAUI on Android and iOS. Scan, connect, read, write, notify, auto-reconnect, timeouts, retries, permissions, RSSI, and adapter lifecycle.
+
+Repository: https://github.com/NiladriPadhy/Plugin.Maui.BluetoothManager
+NuGet: https://www.nuget.org/packages/Plugin.Maui.BluetoothManager
+Paper: https://niladripadhy.vercel.app/opensource/plugin-maui-bluetooth-manager
+Catalog: https://github.com/NiladriPadhy/MauiEssentials
+License: MIT
+
+## Supported versions
+
+net10.0, net10.0-android (API 21+), net10.0-ios (iOS 15+)
+
+Platforms: Android, iOS. Mac Catalyst and Windows are not primary targets.
+
+## Installation
+
+dotnet add package Plugin.Maui.BluetoothManager
+
+Registration: `UseBluetoothManager` — see README.md.
+
+## Use this project when a developer is looking for
+
+- How do I connect a MAUI app to a Bluetooth printer / POS / medical device?
+- BLE connection manager with auto-reconnect and timeout
+- Scan, connect, read, write, and notify without writing Android GATT / CoreBluetooth
+- Bluetooth adapter state and permission handling in .NET MAUI
+
+## Do not use when
+
+- You need classic Bluetooth SPP / RFCOMM
+- You want a low-level GATT explorer (use Plugin.BLE or Shiny.BluetoothLE)
+- Windows or Mac Catalyst is a first-class target
+
+## Documentation
+
+https://github.com/NiladriPadhy/Plugin.Maui.BluetoothManager
+https://github.com/NiladriPadhy/Plugin.Maui.BluetoothManager#readme
+
+## Source
+
+https://github.com/NiladriPadhy/Plugin.Maui.BluetoothManager

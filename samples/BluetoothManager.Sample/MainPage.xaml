@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BluetoothManager.Sample.MainPage"
+             Title="Bluetooth Manager">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="16">
+            <Label Text="Plugin.Maui.BluetoothManager"
+                   FontSize="26"
+                   FontAttributes="Bold" />
+            <Label x:Name="StatusLabel"
+                   Text="Adapter: unknown"
+                   LineBreakMode="WordWrap"
+                   TextColor="{AppThemeBinding Light=#555555, Dark=#BBBBBB}" />
+
+            <Label Text="Scan filter" FontAttributes="Bold" />
+            <Entry x:Name="NameFilterEntry" Placeholder="Name contains (optional)" />
+
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="8" RowDefinitions="Auto,Auto" RowSpacing="8">
+                <Button Text="Request permission" Clicked="OnPermissionClicked" />
+                <Button Grid.Column="1" Text="Scan" Clicked="OnScanClicked" />
+                <Button Grid.Row="1" Text="Stop scan" Clicked="OnStopScanClicked" />
+                <Button Grid.Row="1" Grid.Column="1" Text="Disconnect" Clicked="OnDisconnectClicked" />
+            </Grid>
+
+            <HorizontalStackLayout Spacing="12">
+                <Switch x:Name="ReconnectSwitch" IsToggled="True" />
+                <Label Text="Auto-reconnect on connect" VerticalOptions="Center" />
+            </HorizontalStackLayout>
+
+            <Label Text="Devices" FontAttributes="Bold" />
+            <CollectionView x:Name="DeviceList" HeightRequest="220" SelectionMode="Single" SelectionChanged="OnDeviceSelected">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="8" ColumnDefinitions="*,Auto">
+                            <VerticalStackLayout>
+                                <Label Text="{Binding DisplayName}" FontAttributes="Bold" />
+                                <Label Text="{Binding Id}" FontSize="12" />
+                            </VerticalStackLayout>
+                            <Label Grid.Column="1" Text="{Binding Rssi, StringFormat='{0} dBm'}" VerticalOptions="Center" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Button Text="Connect selected" Clicked="OnConnectClicked" />
+
+            <Label Text="Log" FontAttributes="Bold" />
+            <Border Stroke="{AppThemeBinding Light=#DDDDDD, Dark=#444444}"
+                    StrokeThickness="1"
+                    Padding="12"
+                    StrokeShape="RoundRectangle 8">
+                <Label x:Name="LogLabel"
+                       Text="Ready."
+                       FontSize="12"
+                       LineBreakMode="WordWrap" />
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
