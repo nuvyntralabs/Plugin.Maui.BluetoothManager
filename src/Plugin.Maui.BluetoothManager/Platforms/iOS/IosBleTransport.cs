@@ -110,8 +110,20 @@ sealed class PlatformBleTransport : IBleTransport
 
 		_disposed = true;
 		_ = StopScanAsync();
+		var central = _central;
 		foreach (var session in _sessions.Values)
+		{
+			try
+			{
+				if (central is not null)
+					_ = session.DisconnectAsync(central);
+			}
+			catch
+			{
+			}
+
 			session.Dispose();
+		}
 
 		_sessions.Clear();
 		_peripherals.Clear();

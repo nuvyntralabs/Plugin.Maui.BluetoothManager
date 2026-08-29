@@ -26,14 +26,14 @@
 		<Authors>MauiEssentials</Authors>
 		<Company>MauiEssentials</Company>
 		<Copyright>Copyright © MauiEssentials</Copyright>
-		<Version>1.0.0</Version>
+		<Version>1.0.1</Version>
 		<PackageOutputPath>$(MSBuildThisFileDirectory)..\..\artifacts</PackageOutputPath>
 		<IsPackable>true</IsPackable>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
-		<PackageReleaseNotes>Initial release: high-level BLE device connection manager with scan, connect, read/write/notify, auto-reconnect, timeout, retry, device filtering, RSSI, permissions, and adapter lifecycle.</PackageReleaseNotes>
+		<PackageReleaseNotes>Reliability fixes for races, dispose/lifecycle, and lock or session correctness.</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<ItemGroup>
