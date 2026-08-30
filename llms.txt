@@ -2,10 +2,10 @@
 
 High-level Bluetooth Low Energy device connection manager for .NET MAUI on Android and iOS. Scan, connect, read, write, notify, auto-reconnect, timeouts, retries, permissions, RSSI, and adapter lifecycle.
 
-Repository: https://github.com/NiladriPadhy/Plugin.Maui.BluetoothManager
+Repository: https://github.com/nuvyntralabs/Plugin.Maui.BluetoothManager
 NuGet: https://www.nuget.org/packages/Plugin.Maui.BluetoothManager
 Paper: https://niladripadhy.vercel.app/opensource/plugin-maui-bluetooth-manager
-Catalog: https://github.com/NiladriPadhy/MauiEssentials
+Catalog: https://github.com/nuvyntralabs/MauiEssentials
 License: MIT
 
 ## Supported versions
@@ -35,9 +35,9 @@ Registration: `UseBluetoothManager` — see README.md.
 
 ## Documentation
 
-https://github.com/NiladriPadhy/Plugin.Maui.BluetoothManager
-https://github.com/NiladriPadhy/Plugin.Maui.BluetoothManager#readme
+https://github.com/nuvyntralabs/Plugin.Maui.BluetoothManager
+https://github.com/nuvyntralabs/Plugin.Maui.BluetoothManager#readme
 
 ## Source
 
-https://github.com/NiladriPadhy/Plugin.Maui.BluetoothManager
+https://github.com/nuvyntralabs/Plugin.Maui.BluetoothManager
